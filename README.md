@@ -8,8 +8,11 @@ Landscape outline is rendered in WHITE.
 
 Ground objects:
 Rockets are shown as RED 
+
 Fuel tanks are shown as BLUE
+
 MYSTERYs are shown as GREEN
+
 BASE is shown as YELLOW. 
 
 
