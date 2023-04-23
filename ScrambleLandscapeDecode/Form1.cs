@@ -1,9 +1,13 @@
 using System.Diagnostics.CodeAnalysis;
+using ScrambleLandscapeDecode.Landscapes;
 
 namespace ScrambleLandscapeDecode
 {
     public partial class Form1 : Form
     {
+        private const int CEILING_SUBTRAHEND = 5;
+        private const int FLOOR_MINUEND = 29;
+
         private const int ROCKET = 1;
         private const int FUEL_TANK = 2;
         private const int MYSTERY = 4;
@@ -15,7 +19,9 @@ namespace ScrambleLandscapeDecode
         public Form1()
         {
             InitializeComponent();
-            _decoder = new LandscapeDecoder();
+
+            // For you TODO: Replace Landscape1 with Landscape2, 3, 4, 5..
+            _decoder = new LandscapeDecoder(new Landscape1());
         }
 
 
