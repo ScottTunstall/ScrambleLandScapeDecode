@@ -4,6 +4,11 @@ namespace ScrambleLandscapeDecode
 {
     public partial class Form1 : Form
     {
+        private const int ROCKET = 1;
+        private const int FUEL_TANK = 2;
+        private const int MYSTERY = 4;
+        private const int BASE = 8;
+
         private LandscapeDecoder _decoder;
 
 
@@ -24,11 +29,37 @@ namespace ScrambleLandscapeDecode
             var info = _decoder.Decode(offset);
             while (info != null)
             {
+               
                 int groundY1 = info.LANDSCAPE_GROUND_FIRST_CHAR_PTR * 8;
                 graphics.FillRectangle(Brushes.White, plotAtX, groundY1, 8, 8);
 
                 int groundY2 = info.LANDSCAPE_GROUND_SECOND_CHAR_PTR * 8;
                 graphics.FillRectangle(Brushes.White, plotAtX + 8, groundY2, 8, 8);
+
+                if (info.NEXT_GROUND_OBJECT_ID != 0)
+                {
+                    Brush objectBrush = Brushes.Black;
+                    var widthInPixels = 8;
+                    switch (info.NEXT_GROUND_OBJECT_ID)
+                    {
+                        case ROCKET:
+                            objectBrush = Brushes.Red;
+                            break;
+                        case FUEL_TANK:
+                            objectBrush = Brushes.Blue;
+                            widthInPixels = 16;
+                            break;
+                        case MYSTERY:
+                            objectBrush = Brushes.Green;
+                            widthInPixels = 16;
+                            break;
+                        case BASE:
+                            objectBrush = Brushes.Yellow;
+                            widthInPixels = 16;
+                            break;
+                    }
+                    graphics.FillRectangle(objectBrush, plotAtX, groundY1-16, widthInPixels, 16);
+                }
 
                 if (info.HasCeiling)
                 {
