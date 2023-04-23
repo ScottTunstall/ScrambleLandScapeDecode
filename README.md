@@ -1,11 +1,13 @@
 # ScrambleLandScapeDecode
 
 Explains how to decode the landscapes in Arcade SCRAMBLE 1981.
+(If you want to see my SCRAMBLE disassembly, please visit seanriddle.com/scramble.asm )
 
-Landscape outline is WHITE.
+
+Landscape outline is rendered in WHITE.
 
 Ground objects:
-Rockets are shown as RED
+Rockets are shown as RED 
 Fuel tanks are shown as BLUE
 MYSTERYs are shown as GREEN
 BASE is shown as YELLOW. 
@@ -16,4 +18,3 @@ BASE is shown as YELLOW.
 3. Use at your own risk.
 
 
-If you want to see my SCRAMBLE disassembly, please visit seanriddle.com/scramble.asm
