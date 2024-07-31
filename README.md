@@ -1,7 +1,8 @@
 # ScrambleLandScapeDecode
 
 Explains how to decode the landscapes in Arcade SCRAMBLE 1981.
-(If you want to see my SCRAMBLE disassembly, please visit seanriddle.com/scramble.asm )
+
+(If you are looking for my SCRAMBLE arcade game disassembly, please visit http://seanriddle.com/scramble.asm)
 
 
 Landscape outline is rendered in WHITE.
